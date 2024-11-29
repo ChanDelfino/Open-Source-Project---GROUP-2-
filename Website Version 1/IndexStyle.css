@@ -1,0 +1,236 @@
+* {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+
+  font-family: "Poppins";
+}
+
+/* Navigation Bar Section */
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6); 
+  color: white;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+}
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+#navbar .logo-container img {
+  width: 40px; 
+  height: auto;
+  border-radius: 5px;
+}
+
+
+#navbar .logo-name {
+  font-size: 24px;
+  font-weight: bolder;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px; 
+}
+
+#navbar ul li {
+  display: inline-block;
+}
+
+#navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+
+#navbar ul li a:hover {
+  color:rgb(94, 158, 61); 
+  background-color: rgba(255, 255, 255, 0.2); 
+}
+
+
+#navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8); 
+}
+
+
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  #navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  #navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  #navbar ul li a {
+    width: 100%;
+    padding: 15px 0;
+  }
+}
+
+.btn, .card button {
+
+  color: white; 
+  cursor: pointer;
+  border: none; 
+  background-color: rgb(22, 22, 94); 
+  padding: 1rem 2rem; 
+  border-radius: 15px; 
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; 
+  display: inline-block; 
+  font-size: 20px; 
+}
+
+.btn:hover, .card button:hover {
+  background-color: rgb(94, 158, 61); 
+  color: white; 
+  transform: translateY(-2px); 
+}
+
+/* Main Body Section */
+
+.overlay .btn {
+  margin-top: 20px; 
+}
+
+img {
+  width: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+    url(https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-position: center;
+  background-size: cover;
+
+  height: 100vh;
+}
+#home {
+  display: flex;
+
+  text-align: center;
+  flex-direction: column;
+  padding: 220px 200px;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+.overlay {
+  background: rgb(0, 0, 0, -5);
+  height: 100vh;
+}
+.overlay h1{
+
+  font-size: 40px;
+  font-weight: bold;
+
+}
+.overlay p {
+
+    font-size: 25px;
+
+  }
+  
+/* Responsive Design Section */
+
+@media screen and (max-width: 768px) {
+  #mobile {
+    display: block;
+  }
+  #navbar {
+    display: none;
+  }
+  #home {
+    display: flex;
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .logo1 {
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 1.8rem;
+    color: #fff;
+
+    margin-left: 20px;
+    margin-right: 500px;
+    margin-top: 15px;
+  }
+  a:hover {
+    background-color: rgb(94, 158, 61);
+    border-radius: 16px;
+    padding: 6px 8px 6px 8px;
+    margin: -7px;
+  }
+  header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+      url(https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
+    background-position: center;
+    background-size: cover;
+
+    height: 180vh;
+  }
+}
+.title {
+  text-align: center;
+  width: 100%;
+  color: yellow;
+}
+
+#menu {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 20px 40px;
+  background: rgb(245, 242, 242);
+  min-height: 100vh;
+   margin-bottom: 20px; 
+}
